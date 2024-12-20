@@ -478,9 +478,17 @@ background: var(--OCEAN, #404BBF);
 
 .footer .container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
 
 .footer-logo {
   color: var(--IRIS, #4D5AE5);
@@ -514,6 +522,7 @@ max-width: 264px;
 
 .footer-icons-cont {
   margin-right: 80px;
+  display: flex;
 }
 
 .footer-icons-title {
@@ -554,6 +563,8 @@ background-color: #31d0aa;
 .footer-icon {
 fill: #f4f4fd;
 }
+
+/* Footer subscribe */
 
 .footer-form{
   display: flex;
@@ -618,7 +629,6 @@ fill: #f4f4fd;
 .subscribe-btn:focus{
   background-color: #31d0aa; ;
 }
-
 
 
 
