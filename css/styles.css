@@ -822,3 +822,13 @@ fill: #f4f4fd;
   outline: 1px solid #404BBF;
   outline-offset: 2px;
 }
+
+.dialog-privacy-link {
+  line-height: 1.33333;
+  text-decoration: underline;
+  color: #4d5ae5;
+}
+
+.dialog-submit-btn {
+  display: block;
+}
