@@ -677,3 +677,20 @@ fill: #f4f4fd;
 .overlay:not(.is-visible) .dialog-box {
   transform: translate(-50%, -80%);
 }
+
+.dialog-close-btn {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  width: 24px;
+  height: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
