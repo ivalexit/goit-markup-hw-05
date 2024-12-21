@@ -569,12 +569,25 @@ background: var(--OCEAN, #404BBF);
   font-weight: 500;
   color: #fff;
   margin-bottom: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
+
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
 
 .subscribe-email-input {
   width: calc(100% - 120px);
   max-width: 240px;
+  width: 264px;
   height: 40px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #fff;
   border-radius: 4px;
   padding: 8px 16px;
@@ -589,16 +602,19 @@ background: var(--OCEAN, #404BBF);
 }
 
 .subscribe-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   background: #4d5ae5;
   color: #fff;
   font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.04em;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
+  min-width: 165px;
   height: 40px;
   width: 120px; /* Адаптовано для іконки */
   margin-left: 16px;
@@ -617,7 +633,7 @@ background: var(--OCEAN, #404BBF);
 }
 
 .telegram-subscribe-icon{
-  margin-left: 8px;
+  margin-left: 16px;;
   fill: #fff;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
