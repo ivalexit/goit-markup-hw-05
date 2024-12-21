@@ -729,3 +729,16 @@ fill: #f4f4fd;
 .dialog-input-wrapper {
   position: relative;
 }
+
+
+.dialog-field {
+  margin-bottom: 8px;
+}
+
+.dialog-field.textarea {
+  margin-bottom: 16px;
+}
+
+.dialog-field.checkbox {
+  margin-bottom: 24px;
+}
