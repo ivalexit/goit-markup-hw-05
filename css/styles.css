@@ -709,3 +709,19 @@ fill: #f4f4fd;
 .dialog-close-btn:focus .dialog-close-icon {
   fill: #fff;
 }
+
+.dialog-message {
+  font-weight: 500;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.dialog-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
