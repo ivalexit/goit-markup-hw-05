@@ -742,3 +742,24 @@ fill: #f4f4fd;
 .dialog-field.checkbox {
   margin-bottom: 24px;
 }
+
+
+.dialog-input {
+  padding: 8px 16px;
+  padding-left: 38px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+  background-color: transparent;
+}
+
+.dialog-input:focus-visible {
+  border: 1px solid #4d5ae5;
+}
+
+.dialog-input:focus-visible + .dialog-icon {
+  fill: #4d5ae5;
+}
