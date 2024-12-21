@@ -774,3 +774,51 @@ fill: #f4f4fd;
   pointer-events: none;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.dialog-textarea {
+  padding: 8px 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  outline: transparent;
+  resize: none;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  color: rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dialog-textarea:focus-visible {
+  border-color: #4d5ae5;
+}
+
+.dialog-checkbox {
+  display: inline-block;
+}
+
+.dialog-checkbox-mark {
+  fill: transparent;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dialog-checkbox:checked + .dialog-label > .dialog-checkbox-mark {
+  background-color: #404BBF;
+  border: none;
+  fill: #F4F4FD;
+}
+
+.dialog-checkbox:focus-visible + .dialog-label > .dialog-checkbox-mark {
+  outline: 1px solid #404BBF;
+  outline-offset: 2px;
+}
