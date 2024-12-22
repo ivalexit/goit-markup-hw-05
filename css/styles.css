@@ -713,7 +713,7 @@ background: var(--OCEAN, #404BBF);
 
 .dialog-close-btn:hover .dialog-close-icon,
 .dialog-close-btn:focus .dialog-close-icon {
-  fill: #fff;
+  fill: #ffffff;
   background-color: #404bbf;
   border: none;
 }
@@ -723,6 +723,8 @@ background: var(--OCEAN, #404BBF);
   text-align: center;
   color: #2e2f42;
   margin-bottom: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .dialog-label {
@@ -755,6 +757,7 @@ background: var(--OCEAN, #404BBF);
 .dialog-input {
   padding: 8px 16px;
   padding-left: 38px;
+  border-color: #4D5AE5;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
@@ -762,10 +765,13 @@ background: var(--OCEAN, #404BBF);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
   background-color: transparent;
+  
 }
 
 .dialog-input:focus-visible {
   border: 1px solid #4d5ae5;
+  border-color: #4D5AE5;
+  fill: #4D5AE5;
 }
 
 .dialog-input:focus-visible + .dialog-icon {
@@ -800,7 +806,7 @@ background: var(--OCEAN, #404BBF);
 }
 
 .dialog-textarea:focus-visible {
-  border-color: #4d5ae5;
+  border-color: #4D5AE5;
 }
 
 .dialog-checkbox {
@@ -821,9 +827,10 @@ background: var(--OCEAN, #404BBF);
 }
 
 .dialog-checkbox:checked + .dialog-label > .dialog-checkbox-mark {
-  background-color: #404BBF;
+  background-color: var(--dialog-checked-bg-color, #404bbf);
   border: none;
-  fill: #F4F4FD;
+  fill: var(--dialog-checked-fill-color, #F4F4FD);
+  
 }
 
 .dialog-checkbox:focus-visible + .dialog-label > .dialog-checkbox-mark {
