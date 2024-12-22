@@ -652,7 +652,8 @@ background: var(--OCEAN, #404BBF);
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity, visibility;
 }
 
 .dialog.is-visible {
@@ -668,12 +669,13 @@ background: var(--OCEAN, #404BBF);
   transform: translate(-50%, -50%);
   width: 408px;
   min-height: 584px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   border-radius: 4px;
   padding: 24px;
   padding-top: 72px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
 }
 
 .dialog:not(.is-visible) .dialog-box {
@@ -692,9 +694,9 @@ background: var(--OCEAN, #404BBF);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
-  width: 24px;
+  min-width: 24px;
   height: 24px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dialog-close-btn:hover,
@@ -703,23 +705,34 @@ background: var(--OCEAN, #404BBF);
   border: none;
 }
 
-.dialog-close-btn:hover .dialog-close-icon,
-.dialog-close-btn:focus .dialog-close-icon {
+.dialog-close-btn:hover,
+.dialog-close-btn:focus  {
   fill: #ffffff;
 }
+
+.dialog-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dialog-close-btn:hover .dialog-close-icon,
+.dialog-close-btn:focus .dialog-close-icon{
+    fill: #fff;
+}
+
+
+.dialog-close-icon,
+.dialog-close-icon {
+
+}
+
 
 .dialog-message {
   font-weight: 500;
   text-align: center;
   color: #2e2f42;
   margin-bottom: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-.dialog-form {
-  width: 100%;
-  text-align: center;
+  /* line-height: 1.5;
+  letter-spacing: 0.02em; */
 }
 
 .dialog-label {
@@ -743,6 +756,7 @@ background: var(--OCEAN, #404BBF);
   margin-bottom: 16px;
 }
 
+
 .dialog-field.checkbox {
   margin-bottom: 24px;
 }
@@ -754,16 +768,19 @@ background: var(--OCEAN, #404BBF);
   border-radius: 4px;
   width: 100%;
   height: 40px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color;
   outline: transparent;
   background-color: transparent;
 }
 
-.dialog-input:focus-visible {
+.dialog-input:focus-visible,
+.dialog-input:active {
   border: 1px solid #4D5AE5;
 }
 
-.dialog-input:focus-visible + .dialog-icon {
+.dialog-input:focus-visible + .dialog-icon,
+.dialog-input:active + .dialog-icon {
   fill: #4D5AE5;
 }
 
@@ -774,7 +791,8 @@ background: var(--OCEAN, #404BBF);
   transform: translateY(-50%);
   fill: #2e2f42;
   pointer-events: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
 }
 
 .dialog-textarea {
@@ -793,9 +811,17 @@ background: var(--OCEAN, #404BBF);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dialog-textarea:focus-visible {
+
+
+.dialog-textarea:focus-visible,
+.dialog-textarea:active {
   border-color: #4D5AE5;
 }
+
+.dialog-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
 
 .dialog-checkbox {
   display: inline-block;
@@ -811,7 +837,8 @@ background: var(--OCEAN, #404BBF);
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, border, fill;
 }
 
 .dialog-checkbox:checked + .dialog-label > .dialog-checkbox-mark {
@@ -828,12 +855,13 @@ background: var(--OCEAN, #404BBF);
 .dialog-privacy-link {
   line-height: 1.33333;
   text-decoration: underline;
+  text-decoration-skip-ink: none;
   color: #4d5ae5;
 }
 
 .dialog-submit-btn {
   display: block;
-  margin: 0 auto;
+  /* margin: 0 auto;
   min-width: 169px;
   height: 56px;
   font-weight: 500;
@@ -843,5 +871,15 @@ background: var(--OCEAN, #404BBF);
   cursor: pointer;
   background-color: #4D5AE5;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
+
+.dialog-submit-btn:hover,
+.dialog-submit-btn:focus {
+  border: none;
+}
+
+/* .dialog-form {
+  width: 100%;
+  text-align: center;
+} */
