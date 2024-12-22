@@ -679,7 +679,7 @@ background: var(--OCEAN, #404BBF);
   transition-property: transform;
 }
 
-.dialog:not(.is-visible) .dialog-box {
+.dialog:not(.is-open) .dialog-box {
   transform: translate(-50%, -80%);
 }
 
