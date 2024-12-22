@@ -715,23 +715,12 @@ background: var(--OCEAN, #404BBF);
 }
 
 
-/* помилка у валідаторі*/
+
 .dialog-close-icon:hover,
 .dialog-close-icon:focus {
     fill: #ffffff;
 }
 
-/* спроба через батьківський клас */
-.dialog-close-btn svg:hover,
-.dialog-close-btn svg:focus {
-    fill: #ffffff;
-}
-
-/* спроба через батьківський клас */
-.dialog-close-btn .dialog-close-icon:hover,
-.dialog-close-btn .dialog-close-icon:focus {
-    fill: #ffffff;
-}
 
 
 .dialog-message {
