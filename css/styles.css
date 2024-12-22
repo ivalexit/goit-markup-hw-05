@@ -846,6 +846,7 @@ background: var(--OCEAN, #404BBF);
 
 .dialog-submit-btn {
   display: block;
+  margin: 0 auto;
   min-width: 169px;
   height: 56px;
   font-weight: 500;
