@@ -727,6 +727,12 @@ background: var(--OCEAN, #404BBF);
   letter-spacing: 0.02em;
 }
 
+.dialog-form {
+  width: 100%;
+  text-align: center;
+}
+
+
 .dialog-label {
   display: block;
   font-size: 12px;
