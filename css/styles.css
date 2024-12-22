@@ -738,6 +738,11 @@ background: var(--OCEAN, #404BBF);
     fill: #ffffff;
 }
 
+/* спроба через батьківський клас */
+.dialog-close-btn .dialog-close-icon:hover,
+.dialog-close-btn .dialog-close-icon:focus {
+    fill: #ffffff;
+}
 
 
 .dialog-message {
