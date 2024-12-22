@@ -714,8 +714,8 @@ background: var(--OCEAN, #404BBF);
 .dialog-close-btn:hover .dialog-close-icon,
 .dialog-close-btn:focus .dialog-close-icon {
   fill: #ffffff;
-  background-color: #404bbf;
-  border: none;
+  /*background-color: #404bbf;
+  border: none;*/
 }
 
 .dialog-message {
@@ -846,4 +846,14 @@ background: var(--OCEAN, #404BBF);
 
 .dialog-submit-btn {
   display: block;
+  min-width: 169px;
+  height: 56px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4D5AE5;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
