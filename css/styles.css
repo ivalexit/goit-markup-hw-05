@@ -878,9 +878,9 @@ background: var(--OCEAN, #404BBF);
 
 /* помилка у валідаторі*/
 .dialog-checkbox:checked + .dialog-label > .dialog-checkbox-mark {
-  background-color: #404BBF;
+  background-color: var(--dialog-checked-bg-color, #404BBF);
   border: none;    
-  fill: #F4F4FD;
+  fill: var(--dialog-checked-fill-color, #F4F4FD);
 }
 
 .dialog-checkbox:focus-visible + .dialog-label > .dialog-checkbox-mark {
