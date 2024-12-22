@@ -714,6 +714,8 @@ background: var(--OCEAN, #404BBF);
 .dialog-close-btn:hover .dialog-close-icon,
 .dialog-close-btn:focus .dialog-close-icon {
   fill: #fff;
+  background-color: #404bbf;
+  border: none;
 }
 
 .dialog-message {
