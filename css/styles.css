@@ -700,7 +700,7 @@ background: var(--OCEAN, #404BBF);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* помилка у валідаторі*/
+
 .dialog-close-btn:hover,
 .dialog-close-btn:focus {
     background-color: #404bbf;
@@ -708,18 +708,6 @@ background: var(--OCEAN, #404BBF);
 
 }
 
-
-/* спроба через батьківський клас */
-
-.dialog .dialog-close-btn:hover {
-  background-color: #404bbf;
-  border: none;
-}
-
-.dialog .dialog-close-btn:focus {
-  background-color: #404bbf;
-  border: none;
-}
 
 
 .dialog-close-icon {
